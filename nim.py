@@ -1,14 +1,12 @@
 from random import randint
 
-BAGS_NUMBER = 5
-
 class Nim:
-    def __init__(self):
+    def __init__(self, bags_number):
 
         #introduction
         print("Welcome to Nim game!")
         print("Here is a short introduction to this game:")
-        print(f"\tWe have {BAGS_NUMBER} bags, each containing a number of stones.")
+        print(f"\tWe have {bags_number} bags, each containing a number of stones.")
         print("\tAt each turn, you can extract any number of stones from a single bag.")
         print("\tYou win if you extract the last stone and lose otherwise.")
         print("\tThis game has mostly educational purposes.")
@@ -17,14 +15,16 @@ class Nim:
         #random generation of values
         self.list = []
         last_element = 0
-        for i in range(BAGS_NUMBER - 1):
+        for i in range(bags_number - 1):
             n = randint(1, 100)
             last_element ^= n
             self.list.append(n)
         
         #the last element shouldn't be the xor of the first 4 elements
-        #we use the xor of the first 4 elements + 1 instead
-        self.list.append(last_element + 1)
+        n = randint(1, 100)
+        while n == last_element:
+            n = randint(1, 100)
+        self.list.append(n)
         
         #Intructions:
         print("Now, the game starts!")
@@ -40,7 +40,7 @@ class Nim:
         for string in player_input:
             for character in string:
                 if ord(character) < ord('0') or ord(character) > ord('9'):
-                    print("Your input has been corrupted!")
+                    print("Your input has been corrupted!\n")
                     return False 
         
         x = int(player_input[0])
@@ -63,7 +63,7 @@ class Nim:
 
     def print_list(self):
         for i in range(len(self.list)):
-            print(f"Bag{i + 1}: {self.list[i]}", end = '\t')
+            print(f"Bag{i + 1}: {self.list[i]}    ", end = '')
         print("\n")
 
     def start_game(self):
@@ -134,4 +134,4 @@ class Nim:
                     return 0
 
 
-Nim()
+Nim(5)
