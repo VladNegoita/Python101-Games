@@ -20,7 +20,7 @@ class Nim:
             last_element ^= n
             self.list.append(n)
         
-        #the last element shouldn't be the xor of the first 4 elements
+        #the last element shouldn't be the xor of the first (bags_number - 1) elements
         n = randint(1, 100)
         while n == last_element:
             n = randint(1, 100)
@@ -36,13 +36,21 @@ class Nim:
 
     def validate_input(self, player_input):
 
+        count = 0
+
         #invalid characters
         for string in player_input:
+            count += 1
             for character in string:
                 if ord(character) < ord('0') or ord(character) > ord('9'):
                     print("Your input has been corrupted!\n")
                     return False 
-        
+
+        if count < 2 or count > 2:
+            print("Try Again!")
+            return False
+
+
         x = int(player_input[0])
         y = int(player_input[1])
 
@@ -81,7 +89,7 @@ class Nim:
         else:
             print("Your input was not correct. You should:")
             print("\tEnter only 2 numbers (with space between).")
-            print("\tThe first number should be between 1 and 5.")
+            print(f"\tThe first number should be between 1 and {len(self.list)}.")
             print("\tThe second number should be between 1 and the number of stones in the chosen bag.")
     
         if Victory == 1:
@@ -134,4 +142,4 @@ class Nim:
                     return 0
 
 
-Nim(5)
+Nim(3)
