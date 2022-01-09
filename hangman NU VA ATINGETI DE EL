@@ -9,7 +9,7 @@ time.sleep(1)
 print("The game is about to start!\n Let's play Hangman!\n")
 time.sleep(1)
 
-words = ["january", "auntie"]
+words = ["january", "auntie", "mother", "daughter", "dog", "cat", "apple", "pear", "ant", "august", "picture", "essay", "words", "above", "abandon", "absolute", "banana", "backhand", "backtracking", "bacterium", "bankrupt", "bed", "ball", "baggage", "camera", "camp", "callous", "calculate", "candid", "captain", "crimson", "dangerous", "date", "data", "dear", "declaration", "decorative", "deep", "earlobe", "ear", "early", "ecosystem", "edition", "affect", "effect", "embarrassment", "gain", "generate", "generation", "geography", "gentleman", "hair", "habitat", "hammer", "headache", "hesitate", "major", "machine", "mathematics", "measurement", "membership", "metaphor", "noise", "neutral", "notebook", "blackboard", "coursebook", "observation", "occasionally", "opportunity", "painting", "parallel", "physical", "suicide", "sacrifice", "salary", "schedule", "science", "seal", "sea", "second", "temperature", "tendency", "texture", "tennis", "territory", "terrible", "underground", "underneath", "undo", "reverse", "card", "uniform", "unique", "unicorn", "unlikely", "unusual", "valuable", "village", "video", "game", "vestige", "vessel", "violent"]
 
 # The parameters we require to execute the game:
 def main():
@@ -19,9 +19,11 @@ def main():
     global already_guessed
     global play_game
     global length
+    global word2
     word = random.choice(words)
+    word2 = word
     length = len(word)
-    display = '_ ' * length
+    display = '_' * length
     count = 0
     already_guessed = []
     play_game = ""
@@ -35,6 +37,7 @@ def play_loop():
         play_game = input("Do You want to play again? y = yes, n = no \n")
     if play_game == "y" or play_game =="Y":
         main()
+        hangman()
     elif play_game == "n" or play_game == "N":
         exit()
  
@@ -45,7 +48,6 @@ def hangman():
     global word
     global already_guessed
     global play_game
-    word2 = word
     limit = 5
     guess = input("This is the Hangman Word: " + display + " Enter your guess: \n")
     guess = guess.strip()
