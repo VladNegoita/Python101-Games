@@ -4,7 +4,7 @@ import time
 # Initial Steps to invite in the game:
 print("\nWelcome to Hangman\n")
 name = input("Enter your name: ")
-print("Hello " + name + "!" + "Good Luck!")
+print("Hello " + name + " ! " + "Good Luck!")
 time.sleep(1)
 print("The game is about to start!\n Let's play Hangman!\n")
 time.sleep(1)
@@ -79,7 +79,7 @@ def hangman():
                   "  |      \n"
                   "  |      \n"
                   "__|__\n")
-            print("Wrong guess. You have" + str(limit - count) + "guesses remaining\n")
+            print("Wrong guess. You have " + str(limit - count) + " guesses remaining\n")
  
         elif count == 2:
             time.sleep(1)
@@ -91,7 +91,7 @@ def hangman():
                   "  |      \n"
                   "  |      \n"
                   "__|__\n")
-            print("Wrong guess. You have" + str(limit - count) + "guesses remaining\n")
+            print("Wrong guess. You have " + str(limit - count) + " guesses remaining\n")
  
         elif count == 3:
            time.sleep(1)
@@ -103,7 +103,7 @@ def hangman():
                  "  |      \n"
                  "  |      \n"
                  "__|__\n")
-           print("Wrong guess. You have" + str(limit - count) + "guesses remaining\n")
+           print("Wrong guess. You have " + str(limit - count) + " guesses remaining\n")
  
         elif count == 4:
             time.sleep(1)
