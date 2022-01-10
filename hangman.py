@@ -4,22 +4,12 @@ import time
 # Initial Steps to invite in the game:
 print("\nWelcome to Hangman\n")
 name = input("Enter your name: ")
-print("Hello " + name + "! " + "Good Luck!")
+print("Hello " + name + " ! " + "Good Luck!")
 time.sleep(1)
-print("The game is about to start!\nLet's play Hangman!\n")
+print("The game is about to start!\n Let's play Hangman!\n")
 time.sleep(1)
 
-words = ["january", "auntie", "mother", "daughter", "dog", "cat", "apple", "pear", "ant", "august", "picture",
-        "essay", "words", "above", "abandon", "absolute", "banana", "backhand", "backtracking", "bacterium",
-        "bankrupt", "bed", "ball", "baggage", "camera", "camp", "callous", "calculate", "candid", "captain",
-        "crimson", "dangerous", "date", "data", "dear", "declaration", "decorative", "deep", "earlobe", "ear",
-        "early", "ecosystem", "edition", "affect", "effect", "embarrassment", "gain", "generate", "generation",
-        "geography", "gentleman", "hair", "habitat", "hammer", "headache", "hesitate", "major", "machine", "mathematics",
-        "measurement", "membership", "metaphor", "noise", "neutral", "notebook", "blackboard", "coursebook", "observation",
-        "occasionally", "opportunity", "painting", "parallel", "physical", "suicide", "sacrifice", "salary", "schedule",
-        "science", "seal", "sea", "second", "temperature", "tendency", "texture", "tennis", "territory", "terrible",
-        "underground", "underneath", "undo", "reverse", "card", "uniform", "unique", "unicorn", "unlikely", "unusual",
-        "valuable", "village", "video", "game", "vestige", "vessel", "violent"]
+words = ["january", "auntie", "mother", "daughter", "dog", "cat", "apple", "pear", "ant", "august", "picture", "essay", "words", "above", "abandon", "absolute", "banana", "backhand", "backtracking", "bacterium", "bankrupt", "bed", "ball", "baggage", "camera", "camp", "callous", "calculate", "candid", "captain", "crimson", "dangerous", "date", "data", "dear", "declaration", "decorative", "deep", "earlobe", "ear", "early", "ecosystem", "edition", "affect", "effect", "embarrassment", "gain", "generate", "generation", "geography", "gentleman", "hair", "habitat", "hammer", "headache", "hesitate", "major", "machine", "mathematics", "measurement", "membership", "metaphor", "noise", "neutral", "notebook", "blackboard", "coursebook", "observation", "occasionally", "opportunity", "painting", "parallel", "physical", "suicide", "sacrifice", "salary", "schedule", "science", "seal", "sea", "second", "temperature", "tendency", "texture", "tennis", "territory", "terrible", "underground", "underneath", "undo", "reverse", "card", "uniform", "unique", "unicorn", "unlikely", "unusual", "valuable", "village", "video", "game", "vestige", "vessel", "violent"]
 
 # The parameters we require to execute the game:
 def main():
@@ -67,10 +57,11 @@ def hangman():
         hangman()
 
     elif guess in word:
-        already_guessed.append(guess)
-        index = word.find(guess)
-        word = word[:index] + "_" + word[index + 1:]
-        display = display[:index] + guess + display[index + 1:]
+        while guess in word:
+            already_guessed.append(guess)
+            index = word.find(guess)
+            word = word[:index] + "_" + word[index + 1:]
+            display = display[:index] + guess + display[index + 1:]
         print(display + "\n")
  
     elif guess in already_guessed:
@@ -147,7 +138,9 @@ def hangman():
  
     elif count != limit:
         hangman()
-
+ 
+ 
 main()
-
+ 
+ 
 hangman()
