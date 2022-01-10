@@ -18,8 +18,6 @@ Instructions:
         In order to do so, you have to type the corresponding command (the
         allowed commands will be presented in the terminal)
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
     Step II:
 
         Second of all, you should follow the specific rules for each game.
