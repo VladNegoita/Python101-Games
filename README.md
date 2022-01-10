@@ -10,7 +10,7 @@ You can play 4 games:
     
     4. 
 
-Instructions:
+## Instructions:
 
     Step I:
 
@@ -73,4 +73,4 @@ Instructions:
 
         4. 
 
-# Note: you should follow the instructions presented in the terminal.
+###### Note: you should follow the instructions presented in the terminal.
