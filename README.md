@@ -12,8 +12,6 @@ You can play 4 games:
 
 Instructions:
 
-    # Note: you should follow the instructions presented in the terminal.
-
     Step I:
 
         First of all, you should select the game you want to play.
@@ -77,3 +75,4 @@ Instructions:
 
         4. 
 
+# Note: you should follow the instructions presented in the terminal.
