@@ -55,5 +55,21 @@ Instructions:
                 You should just press the disered arrow key -> that is
                 corresponding to the wanted swipe direction.
 
-        3.
+        3. Hangman
+
+            A brief description:
+
+                The famous word game is here!
+                You have 5 lives: Use them wisely!
+                At each step, you can guess one letter. You win when the
+                entire word is revealed.
+
+            Rules / How to play:
+
+                First, you should enter your name.
+                After this, you should type one letter at a time and see
+                if it appeared in the given word. Repeat this step until
+                either you have won or you lose your life.
+
+        4. 
 
