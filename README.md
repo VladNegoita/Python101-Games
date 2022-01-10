@@ -2,8 +2,11 @@
 
 You can play 4 games:
     1. Nim
+
     2. 2048
+
     3. Hangman
+    
     4. 
 
 Instructions:
