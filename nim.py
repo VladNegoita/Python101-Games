@@ -142,5 +142,3 @@ class Nim:
                 else:
                     return 0
 
-
-Nim(3)

@@ -170,8 +170,3 @@ def alldrawn():
             return False #nu toate patratele au fost desenate
     return True #se incheie jocul
     
-#main
-lines() #functia care deseneaza liniile
-screen.onscreenclick(click) #detecteaza click-urile
-#inchidere fereastra
-screen.mainloop() #pastreaza ecranul deschis pana este apasat butonul care inchide fereastra
