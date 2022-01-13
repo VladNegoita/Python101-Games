@@ -1,7 +1,6 @@
 from nim import Nim
 from game2048 import *
-from hangman import *
-from tictactoe import *
+from turtle import *
 
 def correct_input(chosen_game):
     if chosen_game.isdigit() == False:
@@ -34,9 +33,12 @@ elif game_number == 2:
     game2048 = Game(gamepanel)
     game2048.start()
 elif game_number == 3:
+    from hangman import *
     main()
     hangman()
 elif game_number == 4:
+    from tictactoe import *
+    #init_tictactoe()
     lines() #draws the lines
     screen.onscreenclick(click) #detecting clicks
     #close the window
