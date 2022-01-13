@@ -71,6 +71,6 @@ You can play 4 games:
                 if it appeared in the given word. Repeat this step until
                 either you have won or you lose your life.
 
-        4. 
+        4. TicTacToe
 
 ###### Note: you should follow the instructions presented in the terminal.
