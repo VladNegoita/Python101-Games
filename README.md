@@ -8,7 +8,7 @@ You can play 4 games:
 
     3. Hangman
     
-    4. 
+    4. TicTacToe
 
 ## Instructions:
 
