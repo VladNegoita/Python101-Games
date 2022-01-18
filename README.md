@@ -73,4 +73,21 @@ You can play 4 games:
 
         4. TicTacToe
 
+            A brief description:
+
+                The well-known game is here!
+                This 3 x 3 board game may be traced back to ancient Egypt
+                and has been played everywhere since then.
+
+            Rules / How to play:
+
+                The first player is X, the second one is 0.
+                At each step, you choose one cell you want to mark from
+                the free ones.
+                Pay attention to your opponent moves!
+
+    Step III:
+
+        Enjoy!
+
 ###### Note: you should follow the instructions presented in the terminal.
