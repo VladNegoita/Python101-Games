@@ -2,6 +2,7 @@ from nim import *
 from game2048 import *
 from turtle import *
 from hangman import *
+from tictactoe import *
 
 def correct_input(chosen_game):
     if chosen_game.isdigit() == False:
