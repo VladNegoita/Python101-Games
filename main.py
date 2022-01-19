@@ -36,9 +36,4 @@ elif game_number == 2:
 elif game_number == 3:
     Hangman()
 elif game_number == 4:
-    from tictactoe import *
-    #init_tictactoe()
-    lines() #draws the lines
-    screen.onscreenclick(click) #detecting clicks
-    #close the window
-    screen.mainloop() #keeps the window opened
+    TicTacToe()
