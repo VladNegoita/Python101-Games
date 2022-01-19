@@ -1,6 +1,5 @@
 from nim import *
 from game2048 import *
-from turtle import *
 from hangman import *
 from tictactoe import *
 
