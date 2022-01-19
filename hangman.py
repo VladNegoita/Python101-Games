@@ -1,3 +1,4 @@
+#Copyright 2022 Lidia Manea <manealidia23@yahoo.com>
 import random
 import time
 

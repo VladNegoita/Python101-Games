@@ -1,4 +1,4 @@
-#Copyright 2022 311CA Vlad Negoita <vlad1negoita@gmail.com>
+#Copyright 2022 Vlad Negoita <vlad1negoita@gmail.com>
 from random import randint
 
 class Nim:

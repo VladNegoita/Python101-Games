@@ -1,3 +1,4 @@
+#Copyright 2022 George Raducanu <georgecristian2002@gmail.com>
 from tkinter import *
 from tkinter import messagebox
 import random
