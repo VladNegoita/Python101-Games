@@ -182,3 +182,4 @@ class TicTacToe:
                 return False #nu toate patratele au fost desenate
         return True #se incheie jocul
         
+        
