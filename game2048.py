@@ -47,7 +47,7 @@ class Board:
             rows=[]
             for j in range(4):
                 l=Label(self.gameArea,text='',bg='azure4',
-                font=('calibri',22,'bold'),width=4,height=2)
+                font=('calibri',24,'bold'),width=4,height=2)
                 l.grid(row=i,column=j,padx=7,pady=7)
                 rows.append(l)
             self.board.append(rows)
