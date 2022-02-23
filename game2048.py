@@ -6,19 +6,19 @@ import random
 class Board:
     bg_color={
         '2': '#eee4da',
-        '4': '#ede0c8',
-        '8': '#edc850',
-        '16': '#edc53f',
-        '32': '#f67c5f',
-        '64': '#f65e3b',
-        '128': '#edcf72',
-        '256': '#edcc61',
-        '512': '#f2b179',
-        '1024': '#f59563',
-        '2048': '#edc22e',
+        '4': '#eee4da',
+        '8': '#eee4da',
+        '16': '#eee4da',
+        '32': '#eee4da',
+        '64': '#eee4da',
+        '128': '#eee4da',
+        '256': '#eee4da',
+        '512': '#eee4da',
+        '1024': '#eee4da',
+        '2048': '#eee4da',
     }
     color={
-        '2': '#776e65',
+        '2': '#f9f6f2',
         '4': '#f9f6f2',
         '8': '#f9f6f2',
         '16': '#f9f6f2',
@@ -26,7 +26,7 @@ class Board:
         '64': '#f9f6f2',
         '128': '#f9f6f2',
         '256': '#f9f6f2',
-        '512': '#776e65',
+        '512': '#f9f6f2',
         '1024': '#f9f6f2',
         '2048': '#f9f6f2',
     }
@@ -37,7 +37,7 @@ class Board:
         self.window.title('2048 Game')
         self.gameArea=Frame(self.window,bg= 'azure3')
         self.board=[]
-        self.gridCell=[[0]*4 for i in range(4)]
+        self.gridcell=[[0]*4 for i in range(4)]
         self.compress=False
         self.merge=False
         self.moved=False
@@ -58,12 +58,12 @@ class Board:
             i=0
             j=3
             while(i<j):
-                self.gridCell[ind][i],self.gridCell[ind][j]=self.gridCell[ind][j],self.gridCell[ind][i]
+                self.gridcell[ind][i],self.gridcell[ind][j]=self.gridcell[ind][j],self.gridcell[ind][i]
                 i+=1
                 j-=1
 
     def transpose(self):
-        self.gridCell=[list(t)for t in zip(*self.gridCell)]
+        self.gridcell=[list(t)for t in zip(*self.gridcell)]
 
     def compressGrid(self):
         self.compress=False
@@ -71,39 +71,39 @@ class Board:
         for i in range(4):
             cnt=0
             for j in range(4):
-                if self.gridCell[i][j]!=0:
-                    temp[i][cnt]=self.gridCell[i][j]
+                if self.gridcell[i][j]!=0:
+                    temp[i][cnt]=self.gridcell[i][j]
                     if cnt!=j:
                         self.compress=True
                     cnt+=1
-        self.gridCell=temp
+        self.gridcell=temp
 
     def mergeGrid(self):
         self.merge=False
         for i in range(4):
             for j in range(4 - 1):
-                if self.gridCell[i][j] == self.gridCell[i][j + 1] and self.gridCell[i][j] != 0:
-                    self.gridCell[i][j] *= 2
-                    self.gridCell[i][j + 1] = 0
-                    self.score += self.gridCell[i][j]
+                if self.gridcell[i][j] == self.gridcell[i][j + 1] and self.gridcell[i][j] != 0:
+                    self.gridcell[i][j] *= 2
+                    self.gridcell[i][j + 1] = 0
+                    self.score += self.gridcell[i][j]
                     self.merge = True
 
     def random_cell(self):
         cells=[]
         for i in range(4):
             for j in range(4):
-                if self.gridCell[i][j] == 0:
+                if self.gridcell[i][j] == 0:
                     cells.append((i, j))
 
         curr=random.choice(cells)
         i=curr[0]
         j=curr[1]
-        self.gridCell[i][j]=2
+        self.gridcell[i][j]=2
 
     def can_merge(self):
         for i in range(4):
             for j in range(3):
-                if self.gridCell[i][j] == self.gridCell[i][j+1]:
+                if self.gridcell[i][j] == self.gridcell[i][j+1]:
                     return True
         
         for i in range(3):
@@ -180,7 +180,7 @@ class Game:
         flag=0
         for i in range(4):
             for j in range(4):
-                if(self.gamepanel.gridCell[i][j]==2048):
+                if(self.gamepanel.gridcell[i][j]==2048):
                     flag=1
                     break
         if(flag==1): #found 2048
@@ -191,7 +191,7 @@ class Game:
 
         for i in range(4):
             for j in range(4):
-                if self.gamepanel.gridCell[i][j]==0:
+                if self.gamepanel.gridcell[i][j]==0:
                     flag=1
                     break
 
